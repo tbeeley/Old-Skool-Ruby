@@ -7,7 +7,7 @@ RSpec.configure do |config|
 end
 
 describe 'the Friday test :)' do
-  
+
   specify 'select_elements_starting_with_a' do
     n = select_elements_starting_with_a ['bananas', 'apples', 'pears', 'avocados']
     expect(n).to eq ['apples', 'avocados']
@@ -56,10 +56,10 @@ describe 'the Friday test :)' do
   end
 
   specify 'get_first_half_of_string' do
-    a = get_first_half_of_string 'banana'
+    a = get_first_half_of_string 'thomas'
     b = get_first_half_of_string 'apple'
 
-    expect(a).to eq 'ban'
+    expect(a).to eq 'tho'
     expect(b).to eq 'app'
   end
 
@@ -96,7 +96,7 @@ describe 'the Friday test :)' do
     expect(n).to eq 25
   end
 
-  specify 'double_array' do
+  fit 'double_array' do
     n = double_array [1, 2, 3]
     expect(n).to eq [1, 2, 3, 1, 2, 3]
   end
@@ -218,6 +218,6 @@ describe 'the Friday test :)' do
 
   specify 'count_words_of_each_length_in_a_file' do
     n = count_words_of_each_length_in_a_file('lorem.txt') || []
-    expect(Hash[n.sort]).to eq({1=>1, 2=>5, 3=>7, 4=>12, 5=>14, 6=>4, 7=>8, 8=>6, 9=>6, 10=>2, 11=>2, 12=>3}) 
+    expect(Hash[n.sort]).to eq({1=>1, 2=>5, 3=>7, 4=>12, 5=>14, 6=>4, 7=>8, 8=>6, 9=>6, 10=>2, 11=>2, 12=>3})
   end
 end
