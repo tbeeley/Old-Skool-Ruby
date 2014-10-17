@@ -30,7 +30,7 @@ end
 # [['Bob', 'Clive'], ['Bob', 'Dave'], ['Clive', 'Dave']]
 # make sure you don't have the same pairing twice,
 def every_possible_pairing_of_students(array)
-
+  array.combination(2)
 end
 
 # discard the first 3 elements of an array,
@@ -203,7 +203,8 @@ end
 # where 'special character' means anything apart from the letters
 # a-z (uppercase and lower) or numbers
 def check_a_string_for_special_characters(string)
-
+  return false if /[^\w]/.match(string) == nil
+  true
 end
 
 # get the upper limit of a range. e.g. for the range 1..20, you
@@ -215,7 +216,7 @@ end
 # should return true for a 3 dot range like 1...20, false for a
 # normal 2 dot range
 def is_a_3_dot_range?(range)
-  range.exclude_end
+  range.exclude_end?
 end
 
 # get the square root of a number
@@ -239,34 +240,34 @@ end
 # return true if the date is a uk bank holiday for 2014
 # the list of bank holidays is here:
 # https://www.gov.uk/bank-holidays
-def is_a_2014_bank_holiday?(date)
-end
+  def is_a_2014_bank_holiday?(date)
+  end
 
-# given your birthday this year, this method tells you
-# the next year when your birthday will fall on a friday
-# e.g. january 1st, will next be a friday in 2016
-def your_birthday_is_on_a_friday_in_the_year(birthday)
-end
+  # given your birthday this year, this method tells you
+  # the next year when your birthday will fall on a friday
+  # e.g. january 1st, will next be a friday in 2016
+  def your_birthday_is_on_a_friday_in_the_year(birthday)
+  end
 
-# in a file, total the number of times words of different lengths
-# appear. So in a file with the text "the cat sat on the blue mat"
-# I have 5 words which are 3 letters long, 1 which is 2 letters long
-# and 1 that is 4 letters long. Return it as a hash in the format
-# word_length => count, e.g. {2 => 1, 3 => 5, 4 => 1}
-def count_words_of_each_length_in_a_file(file_path)
-end
+  # in a file, total the number of times words of different lengths
+  # appear. So in a file with the text "the cat sat on the blue mat"
+  # I have 5 words which are 3 letters long, 1 which is 2 letters long
+  # and 1 that is 4 letters long. Return it as a hash in the format
+  # word_length => count, e.g. {2 => 1, 3 => 5, 4 => 1}
+  def count_words_of_each_length_in_a_file(file_path)
+  end
 
-# implement fizzbuzz without modulo, i.e. the % method
-# go from 1 to 100
-# (there's no RSpec test for this one)
-def fizzbuzz_without_modulo
-end
+  # implement fizzbuzz without modulo, i.e. the % method
+  # go from 1 to 100
+  # (there's no RSpec test for this one)
+  def fizzbuzz_without_modulo
+  end
 
-# print the lyrics of the song 99 bottles of beer on the wall
-# http://www.99-bottles-of-beer.net/lyrics.html
-# make sure you use the singular when you have one bottle of
-# beer on the wall, and print 'no more bottles of beer on the wall'
-# at the end.
-# (there's no RSpec test for this one)
-def ninety_nine_bottles_of_beer
-end
+  # print the lyrics of the song 99 bottles of beer on the wall
+  # http://www.99-bottles-of-beer.net/lyrics.html
+  # make sure you use the singular when you have one bottle of
+  # beer on the wall, and print 'no more bottles of beer on the wall'
+  # at the end.
+  # (there's no RSpec test for this one)
+  def ninety_nine_bottles_of_beer
+  end
